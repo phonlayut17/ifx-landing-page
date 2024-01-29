@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inveshub - Ice Factory Excellence</title>
+    <link rel="icon" type="image/x-icon" href="../img/main/IFX_icon_logo.png">
+
+    <!--  Css Other -->
+    <link rel="stylesheet" href="style/main.css">
+
+    <!-- Aos Animation -->
+    <link href="../lib/aos.css" rel="stylesheet">
+    <script src="../lib/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 650,
+                once: false
+            });
+        });
+    </script>
+
+    <!-- Tailwind Css -->
+    <script src="../lib/tailwind.js"></script>
+    <script src="../lib/flowbite.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="bg-intro border-gray-200 dark:bg-gray-900">
+        <div class="max-w-full flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="flex flex-row space-x-8">
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="../img/main/IFX_logo_full.png" class="h-16 w-auto" alt="IFX Logo" />
+                </a>
+                <div class="items-center justify-between hidden w-full xl:flex xl:w-auto xl:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                      <li>
+                        <a onclick="moveToSection('ice-intro');" class="block py-2 px-3 font-bold text-medium text-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                      </li>
+                      <li>
+                        <a onclick="moveToSection('ice-about-us');" class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Us</a>
+                      </li>
+                      <li>
+                        <a onclick="moveToSection('ice-ours-platform');" class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Ours Platform</a>
+                      </li>
+                      <li>
+                        <a onclick="moveToSection('ice-customer-pain');" class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Customer Pain</a>
+                      </li>
+                      <li>
+                        <a onclick="moveToSection('ice-package');" class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Package</a>
+                      </li>
+                      <li>
+                        <a onclick="moveToSection('ice-customer-feedback');" class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Customer Feedback</a>
+                      </li>
+                      <li>
+                        <a onclick="moveToSection('ice-contact-us');" class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row rtl:space-x-reverse dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="https://www.inveshub.co/privacy-content.html"
+                            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="https://www.inveshub.co"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    <!-- Body Section -->
+    <!-- Intro Section -->
+    <div id="ice-intro" class="flex flex-col h-screen justify-center items-center p-16 lg:p-36 bg-odd" data-aos="fade-up"
+        data-aos-duration="1000">
+        <img src="../img/main/ice-intro.png" class="w-fit" alt="Intro" />
+        <div class="flex flex-col text-center">
+            <p class="font-bold text-white text-6xl mb-4">Streamline your Ice Factory Operations</p>
+            <p class="font-medium text-white text-xl">Efficiently manage customer, sales, production, delivery
+                and
+                accounting all in One platform</p>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="ice-about-us" class="flex flex-row justify-center items-center m-16 lg:m-36">
+        <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-right" data-aos-duration="1000">
+            <p class="font-bold text-blue-700 text-6xl">About US</p>
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
+                <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+                    <svg class="w-4 h-4 text-blue-700 dark:text-gray-300" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                        <path
+                            d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                    </svg>
+                </div>
+            </div>
+            <p class="font-medium text-blue-700 text-xl text-center">At Inveshub, we provide a comprehensive
+                platform to manage your ice
+                factory. Our platform (IFX) includes customer, sales, production,
+                delivery and accounting. All in one place. We understand the
+                challenges of running an ice factory, and we're here to help.</p>
+        </div>
+        <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
+            <img src="../img/main/ice-about-us.gif" class="w-4/5" alt="Intro" />
+        </div>
+    </div>
+
+    <!-- Ours Platform Section -->
+    <div id="ice-ours-platform" class="flex flex-col justify-center items-center m-16 lg:m-36">
+        <p class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up">Ours Platform</p>
+        <div class="inline-flex items-center justify-center w-full" data-aos="fade-up">
+            <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
+            <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+                <svg class="w-4 h-4 text-blue-700 dark:text-gray-300" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path
+                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                </svg>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-3 space-x-8 justify-center">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex h-96 justify-center items-center">
+                    <img src="../img/main/ice-platform-customer.gif" class="h-full mb-4" alt="Customer" />
+                </div>
+                <p class="font-bold text-2xl text-blue-700 mb-4">
+                    Customers
+                </p>
+                <p class="font-bold text-medium text-blue-700">
+                    Keep and utilize your customer information to keep them satisfy with your service on our platform.
+                </p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
+                <div class="flex h-96 justify-center items-center">
+                    <img src="../img/main/ice-platform-delivery.gif" class="h-96 mb-4" alt="Delivery" />
+                </div>
+                <p class="font-bold text-2xl text-blue-700 mb-4">
+                    Production - Delivery
+                </p>
+                <p class="font-bold text-medium text-blue-700">
+                    Manage and control your production according to your delivery plan and monitor your driver in
+                    real-time. Reduce transportation time and operation cost.
+                </p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
+                <div class="flex h-96 justify-center items-center">
+                    <img src="../img/main/ice-platform-cal.gif" class="h-96 mb-4" alt="Sales Account" />
+                </div>
+                <p class="font-bold text-2xl text-blue-700 mb-4">
+                    Sales - Acoounting
+                </p>
+                <p class="font-bold text-medium text-blue-700">
+                    Monitor sales peformance. production efficient, warehouse status and track expenses. All in one
+                    place.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Pain Section -->
+    <div id="ice-customer-pain" class="flex flex-col justify-center items-center p-16 lg:mp-36 bg-odd"
+        data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="font-bold text-blue-700 text-6xl">Customer Pain &amp; Problem</h3>
+        <div class="inline-flex items-center justify-center w-full">
+            <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
+            <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+                <svg class="w-4 h-4 text-blue-700 dark:text-gray-300" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path
+                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                </svg>
+            </div>
+        </div>
+        <iframe class="w-4/5" height="480" src="https://www.youtube.com/embed/C22i1QXFesI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+
+    <!-- Package Section -->
+    <div id="ice-package" class="flex flex-col justify-center items-center m-16 lg:m-36" data-aos="fade-up"
+        data-aos-duration="1000">
+        <p class="font-bold text-blue-700 text-6xl text-center">Packages & Service</p>
+        <div class="inline-flex items-center justify-center w-full">
+            <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
+            <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+                <svg class="w-4 h-4 text-blue-700 dark:text-gray-300" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path
+                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                </svg>
+            </div>
+        </div>
+        <div class="overflow-auto relative mb-4">
+            <table class="table-fixed border-r border-l border-blue-700 w-full">
+                <thead>
+                    <tr class="bg-blue-700 text-2xl text-white">
+                        <th class="py-8">Package</th>
+                        <th>Drop Point</th>
+                        <th>Car</th>
+                        <th>Amount (THB)</th>
+                        <th>Amount (Day)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-blue-700 border-b border-blue-700 text-2xl">
+                        <th class="py-8">S-Pack (40K)</th>
+                        <th>1-1,000</th>
+                        <th>10</th>
+                        <th>0.38</th>
+                        <th>380</th>
+                    </tr>
+                    <tr class="text-blue-700 border-b border-blue-700 text-2xl">
+                        <th class="py-8">M-Pack</th>
+                        <th>1,000 - 4,000</th>
+                        <th>40</th>
+                        <th>0.33</th>
+                        <th>1,320</th>
+                    </tr>
+                    <tr class="text-blue-700 border-b border-blue-700 text-2xl">
+                        <th class="py-8">L-Pack</th>
+                        <th>4,001 - 10,000</th>
+                        <th>100</th>
+                        <th>0.27</th>
+                        <th>2,700</th>
+                    </tr>
+                    <tr class="text-blue-700 border-b border-blue-700 text-2xl">
+                        <th class="py-8">XL-Pack</th>
+                        <th>10,000 ++</th>
+                        <th>> 101</th>
+                        <th>Quote</th>
+                        <th>Quote</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-xl text-blue-700 text-center mb-4">
+            Pricing is calculated based on the active customer(drop-point) in the system. The cost is summarized monthly
+            on
+            the 1st day, using the maximum number of <u class="inline underline">active customer(drop-point)</u> in that
+            previous month. <b class="inline font-bold">Service fee</b> will
+            <b class="inline font-bold">automatically deduct</b> from your credit-card on <b
+                class="inline font-bold">every 16th of month.</b>
+        </p>
+        <p class="text-lg text-blue-700 mb-4"><b class="inline font-bold">For example;</b> Factory A has maximum active
+            customers in July 100 drop-point. 1st August, the service fee will be calculated as below.
+            <br />
+            <b class="inline font-bold">active customer * package price* day * VAT7%* Service charge 3.65% = service
+                fee</b> 100*0.38THB*31*1.07*1.0365 = <b class="inline font-bold">1,306.46</b> THB
+        </p>
+        <hr class="w-48 h-1 mx-auto my-4 bg-blue-700 border-0 rounded md:my-10 dark:bg-gray-700">
+        <div class="flex flex-col">
+            <p class="font-bold text-xl text-blue-700 text-left mb-4">
+                Service Scope:
+            </p>
+            <ul class="space-y-2 text-xl text-blue-700 text-left list-disc list-inside dark:text-gray-400">
+                <li>
+                    The platform is available for use and supports 24/7 operations with a 99.999% Up-time Warranty.
+                </li>
+                <li>
+                    Support teams are available for assistance, consultation, and user training on regular business days
+                    from 8:00 AM
+                    to 5:00 PM.
+                </li>
+                <li>
+                    The development team works to improve efficiency and introduce new functionalities to meet user
+                    requirements.
+                </li>
+                <li>
+                    Daily and monthly data backups are performed to ensure data redundancy.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Customer Feedback Section -->
+    <div id="ice-customer-feedback" class="flex flex-col p-16 lg:p-36 bg-odd-25">
+        <p class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up" data-aos-duration="1000">Customer
+            Feedback</p>
+        <div class="inline-flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1000">
+            <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
+            <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+                <svg class="w-4 h-4 text-blue-700 dark:text-gray-300" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path
+                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                </svg>
+            </div>
+        </div>
+        <div class="flex flex-row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-right" data-aos-duration="1000">
+                <img src="../img/main/ice-feedback.gif" class="w-3/5" alt="Feedback" />
+            </div>
+            <div class="flex flex-col w-1/2 justify-center" data-aos="fade-left" data-aos-duration="1000">
+                <p class="font-medium text-blue-700 text-2xl mb-4">
+                    IFX has revolutionized the way we manage our ice factory. The platform's seamless integration of
+                    customers, sales, production, delivery, and accounting has made our operations more efficient
+                    and profitable. We can increase <b class="inline underline">our revenue more than 20%</b> in the
+                    first month.
+                    Thank you IFX for your excellence in service!
+                </p>
+                <p class="font-bold text-white lg:text-blue-700 text-xl">- Thong-natee Ice factory, Buriram -</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="ice-contact-us" class="flex flex-col justify-center p-16 lg:p-36 bg-odd">
+        <div data-aos="fade-down" data-aos-duration="1000">
+            <p class="font-bold text-blue-700 text-6xl text-left mb-4">Contact Us</p>
+            <hr class="w-full h-1 my-4 bg-blue-700 border-0 rounded md:my-10 dark:bg-gray-700">
+            <form class="contact-form" action="https://www.inveshub.co">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                    <div class="flex">
+                        <span
+                            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
+                            </svg>
+                        </span>
+                        <input type="text" id="name"
+                            class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Please input Name" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="tel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tel</label>
+                    <div class="flex">
+                        <span
+                            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M5 4c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2 1 1 0 1 0 0-2Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <input type="text" id="tel"
+                            class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Please input Tel" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail</label>
+                    <div class="flex">
+                        <span
+                            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.5a6 6 0 0 1 1.5 4v4a1 1 0 1 1-2 0v-4a4 4 0 0 0-4-4h-.5C5 6 3 8 3 10.5V16c0 .6.4 1 1 1h7v3c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-3h5c.6 0 1-.4 1-1v-6a4 4 0 0 0-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z" />
+                            </svg>
+                        </span>
+                        <input type="email" id="name"
+                            class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Please input Email" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="message"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+                    <textarea id="message" rows="4"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Leave your message here."></textarea>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <button type="submit"
+                        class="text-white bg-blue-700 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="fixed bottom-8 right-8 block xl:hidden">
+        <button id="dropdownTopButton" data-dropdown-toggle="dropdownTop" data-dropdown-placement="top"
+            class="text-blue-700 bg-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+            type="button">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+            </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div id="dropdownTop"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56 dark:bg-gray-700">
+            <ul class="py-2 font-bold text-lg text-blue-700 text-center dark:text-gray-200" aria-labelledby="dropdownTopButton">
+                <li>
+                    <a onclick="moveToSection('ice-intro');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
+                </li>
+                <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
+                <li>
+                    <a onclick="moveToSection('ice-about-us');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                        Us</a>
+                </li>
+                <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
+                <li>
+                    <a onclick="moveToSection('ice-ours-platform');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ours
+                        Platform</a>
+                </li>
+                <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
+                <li>
+                    <a onclick="moveToSection('ice-customer-pain');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Customer
+                        Pain</a>
+                </li>
+                <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
+                <li>
+                    <a onclick="moveToSection('ice-package');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Package</a>
+                </li>
+                <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
+                <li>
+                    <a onclick="moveToSection('ice-customer-feedback');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Customer
+                        Feedback</a>
+                </li>
+                <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
+                <li>
+                    <a onclick="moveToSection('ice-contact-us');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contact
+                        Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="flex flex-col-reverse lg:flex-row bg-blue-700">
+        <div class="flex flex-col space-y-4 justify-center items-center w-full py-4 lg:py-0">
+            <p class="text-2xl text-white font-bold">Information</p>
+            <hr class="w-2/5 h-1 my-4 bg-white border-0 rounded md:my-10 dark:bg-gray-700">
+            <div class="flex flex-col justify-center items-center text-white">
+                <svg class="w-12 h-12 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M12 2a8 8 0 0 1 6.6 12.6l-.1.1-.6.7-5.1 6.2a1 1 0 0 1-1.6 0L6 15.3l-.3-.4-.2-.2v-.2A8 8 0 0 1 11.8 2Zm3 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <p class="text-xl">5/1108 Prachachuen village Samakee rd. Soi 63. Bang-tarad</p>
+                <p class="text-xl">Pakkret Nonthaburi 11120 TAX ID: 0195558001681</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-white">
+                <svg class="w-12 h-12 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M5 4c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2 1 1 0 1 0 0-2Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <p class="text-xl">084 329 5023</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-white">
+                <svg class="w-12 h-12 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.5a6 6 0 0 1 1.5 4v4a1 1 0 1 1-2 0v-4a4 4 0 0 0-4-4h-.5C5 6 3 8 3 10.5V16c0 .6.4 1 1 1h7v3c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-3h5c.6 0 1-.4 1-1v-6a4 4 0 0 0-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z" />
+                </svg>
+                <p class="text-xl">info@inveshub.com</p>
+            </div>
+        </div>
+        <div class="w-full">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.2707362437113!2d100.53908977678854!3d13.882753294244829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e283cdaf15ffe3%3A0xf416c3ecba3b2458!2sInveshub!5e0!3m2!1sen!2sth!4v1688482397211!5m2!1sen!2sth"
+                class="w-full h-96" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+</body>
+
+<script>
+    function moveToSection(section) {
+        document.querySelector('#' + section).scrollIntoView({
+            inline: 'start',
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</html>

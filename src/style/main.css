@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Geliat ExtraLight";
+    src: url("../../fonts/geliat-font/GeliatExtralight.otf");
+}
+
+body {
+    font-family: "Geliat ExtraLight";
+    margin: 0;
+    padding: 0;
+}
+
+.bg-odd {
+    background: rgb(29, 78, 216);
+    background: linear-gradient(0deg, rgba(29, 78, 216, 1) 0%, rgba(255, 255, 255, 1) 50%);
+}
+
+.bg-odd-25 {
+    background: rgb(29,78,216);
+    background: linear-gradient(0deg, rgba(29,78,216,1) 0%, rgba(255,255,255,1) 25%);
+}
+
+.bg-even {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(29,78,216,1) 100%);
+}
