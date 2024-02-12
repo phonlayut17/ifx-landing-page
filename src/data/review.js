@@ -1,32 +1,12 @@
 var review = [
   {
-    "province": 13,
-    "user": "Napalai Ice factory",
-    "review": "IFX has revolutionized the way we manage our ice factory. The platform's seamless integration of customers, sales, production, delivery, and accounting has made our operations more efficient and profitable. We can increase our revenue more than 20%</b> in the first month. Thank you IFX for your excellence in service!"
-  },
-  {
     "province": 39,
-    "user": "Thong-natee Ice factory",
-    "review": "IFX has revolutionized the way we manage our ice factory. The platform's seamless integration of customers, sales, production, delivery, and accounting has made our operations more efficient and profitable. We can increase our revenue more than 20%</b> in the first month. Thank you IFX for your excellence in service!"
-  },
-  {
-    "province": 39,
-    "user": "Thong-natee Ice factory",
-    "review": "IFX has revolutionized the way we manage our ice factory. The platform's seamless integration of customers, sales, production, delivery, and accounting has made our operations more efficient and profitable. We can increase our revenue more than 20%</b> in the first month. Thank you IFX for your excellence in service!"
-  },
-  {
-    "province": 40,
-    "user": "Somsong Factory",
-    "review": "IFX has revolutionized the way we manage our ice factory. The platform's seamless integration of customers, sales, production, delivery, and accounting has made our operations more efficient and profitable. We can increase our revenue more than 20%</b> in the first month. Thank you IFX for your excellence in service!"
+    "user": "คุณวิน โรงงานน้ำแข็งทองนที",
+    "review": "ระบบนี้เข้ามาช่วยให้มองเห็นภาพรวมทุกมิติครับ ทำให้สามารถแก้ปัญหาง่ายขึ้น และกลับมาสนุกกับการทำโรงงานน้ำแข็งครับ"
   },
   {
     "province": 51,
-    "user": "Ice Co.Ltd",
-    "review": "Nice System."
-  },
-  {
-    "province": 82,
-    "user": "Prachin Ice Factory",
-    "review": "This Amazing for Factory."
+    "user": "คุณเล็ก โรงงานน้ำแข็งภูพาน",
+    "review": "คอมเม้น ระบบดีครับ ทำให้บริหารจัดการง่ายมากยิ่งขึ้น เวลาคุยกับลูกน้องก็อ้างอิงจากข้อมูลที่อยู่ในระบบ"
   }
 ];
