@@ -31,6 +31,10 @@
     <!-- Review Data -->
     <script src="data/review.js"></script>
 
+    <!-- Language -->
+    <script src="../language/language-data.js"></script>
+    <script src="../language/language-function.js"></script>
+
     <!-- Send Email and Scroll Section Function -->
     <script>
         function moveToSection(section) {
@@ -93,21 +97,20 @@
                 ['th-pt', 30], ['th-no', 31], ['th-sp', 32], ['th-ss', 33],
                 ['th-sm', 34], ['th-pe', 35], ['th-cc', 36], ['th-nn', 37],
                 ['th-cb', 38], ['th-br', 39], ['th-kk', 40], ['th-ph', 41],
-                ['th-kl', 42], ['th-sr', 43], ['th-nr', 44], ['th-si', 45],
-                ['th-re', 46], ['th-le', 47], ['th-nk', 48], ['th-ac', 49],
-                ['th-md', 50], ['th-sn', 51], ['th-nw', 52], ['th-pi', 53],
-                ['th-rn', 54], ['th-nt', 55], ['th-sg', 56], ['th-pr', 57],
-                ['th-py', 58], ['th-so', 59], ['th-ud', 60], ['th-kn', 61],
-                ['th-tk', 62], ['th-ut', 63], ['th-ns', 64], ['th-pk', 65],
-                ['th-ur', 66], ['th-sk', 67], ['th-ry', 68], ['th-cy', 69],
-                ['th-su', 70], ['th-nf', 71], ['th-bk', 72], ['th-mh', 73],
-                ['th-pu', 74], ['th-cp', 75], ['th-yl', 76], ['th-cr', 77],
-                ['th-cm', 78], ['th-ln', 79], ['th-na', 80], ['th-lg', 81],
-                ['th-pb', 82], ['th-rt', 83], ['th-ys', 84], ['th-ms', 85],
-                ['th-un', 86], ['th-nb', 87]
+                // ['th-kl', 42], ['th-sr', 43], ['th-nr', 44], ['th-si', 45],
+                // ['th-re', 46], ['th-le', 47], ['th-nk', 48], ['th-ac', 49],
+                // ['th-md', 50], ['th-sn', 51], ['th-nw', 52], ['th-pi', 53],
+                // ['th-rn', 54], ['th-nt', 55], ['th-sg', 56], ['th-pr', 57],
+                // ['th-py', 58], ['th-so', 59], ['th-ud', 60], ['th-kn', 61],
+                // ['th-tk', 62], ['th-ut', 63], ['th-ns', 64], ['th-pk', 65],
+                // ['th-ur', 66], ['th-sk', 67], ['th-ry', 68], ['th-cy', 69],
+                // ['th-su', 70], ['th-nf', 71], ['th-bk', 72], ['th-mh', 73],
+                // ['th-pu', 74], ['th-cp', 75], ['th-yl', 76], ['th-cr', 77],
+                // ['th-cm', 78], ['th-ln', 79], ['th-na', 80], ['th-lg', 81],
+                // ['th-pb', 82], ['th-rt', 83], ['th-ys', 84], ['th-ms', 85],
+                // ['th-un', 86], ['th-nb', 87]
             ];
 
-            // Create the chart
             Highcharts.mapChart('ice-location-province', {
                 chart: {
                     map: topology
@@ -150,11 +153,13 @@
                     },
                     dataLabels: {
                         enabled: true,
-                        format: '{point.name}'
+                        format: '{point.name}',
+                        formatter: function () {
+                            return this.point.value ? this.point.name : null;
+                        }
                     },
                     events: {
                         click: function (event) {
-                            // Access data for the clicked point
                             const province = event.point.options.value;
                             searchReview(province);
                         }
@@ -178,33 +183,29 @@
                     <ul
                         class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a onclick="moveToSection('ice-intro');"
+                            <a id="menu-1" onclick="moveToSection('ice-intro');"
                                 class="block py-2 px-3 font-bold text-medium text-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                                aria-current="page">Home</a>
+                                aria-current="page"></a>
                         </li>
                         <li>
-                            <a onclick="moveToSection('ice-problem');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Have
-                                you ever ?</a>
+                            <a id="menu-2" onclick="moveToSection('ice-problem');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                         <li>
-                            <a onclick="moveToSection('ice-process');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Process</a>
+                            <a id="menu-3" onclick="moveToSection('ice-about-us');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                         <li>
-                            <a onclick="moveToSection('ice-about-us');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About
-                                Us</a>
+                            <a id="menu-4" onclick="moveToSection('ice-process');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                         <li>
-                            <a onclick="moveToSection('ice-ours-platform');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Ours
-                                Platform</a>
+                            <a id="menu-5" onclick="moveToSection('ice-ours-platform');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                         <li>
-                            <a onclick="moveToSection('ice-customer-pain');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Customer
-                                Pain</a>
+                            <a id="menu-6" onclick="moveToSection('ice-customer-pain');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                         <!-- <li>
                             <a onclick="moveToSection('ice-customer-feedback');"
@@ -212,19 +213,24 @@
                                 Feedback</a>
                         </li> -->
                         <li>
-                            <a onclick="moveToSection('ice-stores');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Stores</a>
+                            <a id="menu-7" onclick="moveToSection('ice-stores');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                         <li>
-                            <a onclick="moveToSection('ice-package');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Package</a>
+                            <a id="menu-8" onclick="moveToSection('ice-package');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                         <li>
-                            <a onclick="moveToSection('ice-contact-us');"
-                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact
-                                Us</a>
+                            <a id="menu-9" onclick="moveToSection('ice-contact-us');"
+                                class="block py-2 px-3 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
                         </li>
                     </ul>
+                </div>
+                <div class="flex flex-row space-x-4 xl:order-2">
+                    <button onclick="languages('en');"><img src="../img/main/en.png" class="w-8 h-8"
+                            alt="EN" /></button>
+                    <button onclick="languages('th');"><img src="../img/main/th.png" class="w-8 h-8"
+                            alt="TH" /></button>
                 </div>
             </div>
             <button data-collapse-toggle="navbar-default" type="button"
@@ -237,16 +243,16 @@
                         d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <div class="hidden w-full md:block md:w-auto flex flex-row" id="navbar-default">
                 <ul
                     class="font-medium flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row rtl:space-x-reverse dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="https://www.inveshub.co/privacy-content.html"
-                            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Privacy</a>
+                        <a id="menu-privacy" href="https://www.inveshub.co/privacy-content.html"
+                            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"></a>
                     </li>
                     <li>
-                        <a href="https://www.inveshub.co"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login</a>
+                        <a id="menu-login" href="https://www.inveshub.co"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"></a>
                     </li>
                 </ul>
             </div>
@@ -259,17 +265,14 @@
         data-aos="fade-up" data-aos-duration="1000">
         <img src="../img/main/ice-intro.png" class="w-fit" alt="Intro" />
         <div class="flex flex-col text-center">
-            <p class="font-bold text-white text-6xl mb-4">Streamline your Ice Factory Operations</p>
-            <p class="font-medium text-white text-xl">Efficiently manage customer, sales, production, delivery
-                and
-                accounting all in One platform</p>
+            <p id="intro-header" class="font-bold text-white text-6xl mb-4"></p>
+            <p id="intro-description" class="font-medium text-white text-xl"></p>
         </div>
     </div>
 
     <!-- Problem Section -->
     <div id="ice-problem" class="flex flex-col justify-center items-center m-16 lg:m-36">
-        <p class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up">Have you ever encountered these
-            problems?</p>
+        <p id="problem-header" class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up"></p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up">
             <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
             <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -285,58 +288,30 @@
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-fail-owner.png" class="h-60 mb-4" alt="Customer" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Owner
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Must stay permanently, cannot abandon the factory.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Tanks go missing, have to buy new ones every year.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Cannot say how the sales are for the shops with the tanks.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Difficult to evaluate employee performance.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Limited negotiation power, have to yield.
-                </p>
+                <p id="problem-owner" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="problem-1" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-2" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-3" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-4" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-5" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-fail-customer.png" class="h-60 mb-4" alt="Delivery" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Customer
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Did not receive the goods.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Delivery not on time.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Been a customer for a long time, no promotions or free items.
-                </p>
+                <p id="problem-customer" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="problem-6" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-7" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-8" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-fail-delivery.png" class="h-60 mb-4" alt="Sales Account" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Delivery
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Late delivery, customer complaints.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Vehicles overlapping routes, sales not increasing.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - New drivers, unaware of routes and shop locations.
-                </p>
+                <p id="problem-delivery" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="problem-9" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-10" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="problem-11" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
         </div>
     </div>
@@ -344,7 +319,7 @@
     <!-- About Us Section -->
     <div id="ice-about-us" class="flex flex-row justify-center items-center m-16 lg:m-36">
         <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-right" data-aos-duration="1000">
-            <p class="font-bold text-blue-700 text-6xl">About US</p>
+            <p id="about-us-header" class="font-bold text-blue-700 text-6xl"></p>
             <div class="inline-flex items-center justify-center w-full">
                 <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
                 <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -355,11 +330,7 @@
                     </svg>
                 </div>
             </div>
-            <p class="font-medium text-blue-700 text-xl text-center">At Inveshub, we provide a comprehensive
-                platform to manage your ice
-                factory. Our platform (IFX) includes customer, sales, production,
-                delivery and accounting. All in one place. We understand the
-                challenges of running an ice factory, and we're here to help.</p>
+            <p id="about-us-description" class="font-medium text-blue-700 text-xl text-center"></p>
         </div>
         <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
             <img src="../img/main/ice-about-us.gif" class="w-4/5" alt="Intro" />
@@ -384,118 +355,65 @@
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-process-owner.png" class="h-60 mb-4" alt="Customer" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Owner
+                <p id="process-owner" class="font-bold text-4xl text-blue-700 mb-4">
                 </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Daily operation reports via Line.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - The organization's vulnerability-sealing system closes gaps in corruption and allows for
-                    comprehensive data monitoring throughout the process.
-                </p>
+                <p id="process-1" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-2" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-process-customer.png" class="h-60 mb-4" alt="Delivery" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Customer / Stores
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Record inspections of store and tank data.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check the history of product orders, total purchase amounts, and manage promotions.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Support cash, credit, QR, and Prompt Pay payment.
-                </p>
+                <p id="process-customer" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="process-3" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-4" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-5" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-process-sales.png" class="h-60 mb-4" alt="Sales Account" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Sales
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Efficiently manage orders and delivery plans.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Support urgent product orders, ensuring no orders are missed.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Able to create promotions that meet the needs.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Review historical product purchase data and create opportunities for market expansion.
-                </p>
+                <p id="process-sales" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="process-6" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-7" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-8" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-9" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="4000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-process-production.png" class="h-60 mb-4" alt="Customer" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Production
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check production planning and actual results.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Manage warehouse products and reduce stock overflow issues.
-                </p>
+                <p id="process-production" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="process-10" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-11" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="5000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-process-delivery.png" class="h-60 mb-4" alt="Delivery" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Delivery
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check the status of drivers.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Navigate and calculate real-time financial figures.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check running distances to assess market and driver potential.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Summarize financial figures and record expenses.
-                </p>
+                <p id="process-delivery" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="process-12" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-13" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-14" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-15" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="6000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-process-accounting.png" class="h-60 mb-4" alt="Sales Account" />
                 </div>
-                <p class="font-bold text-4xl text-blue-700 mb-4">
-                    Accounting & Administrative
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check warehouse and in-vehicle products in real-time.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check production processes and results.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Inspect ice chest and bags.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check store-wise sales, cash amounts, promotion usage, off-plan sales, credit amounts, and
-                    outstanding balances.
-                </p>
-                <p class="font-bold text-lg text-blue-700 text-left">
-                    - Check driver expenses.
-                </p>
+                <p id="process-accounting" class="font-bold text-4xl text-blue-700 mb-4"></p>
+                <p id="process-16" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-17" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-18" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-19" class="font-bold text-lg text-blue-700 text-left"></p>
+                <p id="process-20" class="font-bold text-lg text-blue-700 text-left"></p>
             </div>
         </div>
     </div>
 
     <!-- Ours Platform Section -->
     <div id="ice-ours-platform" class="flex flex-col justify-center items-center m-16 lg:m-36">
-        <p class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up">Ours Platform</p>
+        <p id="platform-header" class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up"></p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up">
             <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
             <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -511,44 +429,30 @@
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-platform-customer.gif" class="h-full mb-4" alt="Customer" />
                 </div>
-                <p class="font-bold text-2xl text-blue-700 mb-4">
-                    Customers
-                </p>
-                <p class="font-bold text-medium text-blue-700">
-                    Keep and utilize your customer information to keep them satisfy with your service on our platform.
-                </p>
+                <p id="platform-customer" class="font-bold text-2xl text-blue-700 mb-4"></p>
+                <p id="platform-customer-description" class="font-bold text-medium text-blue-700"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-platform-delivery.gif" class="h-96 mb-4" alt="Delivery" />
                 </div>
-                <p class="font-bold text-2xl text-blue-700 mb-4">
-                    Production - Delivery
-                </p>
-                <p class="font-bold text-medium text-blue-700">
-                    Manage and control your production according to your delivery plan and monitor your driver in
-                    real-time. Reduce transportation time and operation cost.
-                </p>
+                <p id="platform-production-delivery" class="font-bold text-2xl text-blue-700 mb-4"></p>
+                <p id="platform-production-delivery-description" class="font-bold text-medium text-blue-700"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
                 <div class="flex h-96 justify-center items-center">
                     <img src="../img/main/ice-platform-cal.gif" class="h-96 mb-4" alt="Sales Account" />
                 </div>
-                <p class="font-bold text-2xl text-blue-700 mb-4">
-                    Sales - Acoounting
-                </p>
-                <p class="font-bold text-medium text-blue-700">
-                    Monitor sales peformance. production efficient, warehouse status and track expenses. All in one
-                    place.
-                </p>
+                <p id="platform-sales-accounting" class="font-bold text-2xl text-blue-700 mb-4"></p>
+                <p id="platform-sales-accounting-description" class="font-bold text-medium text-blue-700"></p>
             </div>
         </div>
     </div>
 
     <!-- Customer Pain Section -->
-    <div id="ice-customer-pain" class="flex flex-col justify-center items-center p-16 lg:mp-36 bg-odd"
-        data-aos="fade-up" data-aos-duration="1000">
-        <h3 class="font-bold text-blue-700 text-6xl">Customer Pain &amp; Problem</h3>
+    <div id="ice-customer-pain" class="flex flex-col justify-center items-center p-16 lg:p-36 bg-odd" data-aos="fade-up"
+        data-aos-duration="1000">
+        <h3 id="customer-pain-problem" class="font-bold text-blue-700 text-6xl"></h3>
         <div class="inline-flex items-center justify-center w-full">
             <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
             <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -598,7 +502,8 @@
 
     <!-- Stores Section -->
     <div id="ice-stores" class="flex flex-col p-16 lg:p-36">
-        <p class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up" data-aos-duration="1000">Stores</p>
+        <p id="stores-header" class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up"
+            data-aos-duration="1000"></p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1000">
             <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
             <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -612,7 +517,7 @@
         <div class="flex flex-row">
             <div id="ice-location-province" data-aos="fade-up" data-aos-duration="2000"></div>
             <div id="review-section" class="hidden flex flex-col w-1/2">
-                <p class="font-bold text-blue-700 text-2xl text-center mb-8">Review</p>
+                <p id="stores-review" class="font-bold text-blue-700 text-2xl text-center mb-8"></p>
                 <div id="review"></div>
             </div>
         </div>
@@ -621,7 +526,7 @@
     <!-- Package Section -->
     <div id="ice-package" class="flex flex-col justify-center items-center m-16 lg:m-36" data-aos="fade-up"
         data-aos-duration="1000">
-        <p class="font-bold text-blue-700 text-6xl text-center">Packages & Service</p>
+        <p id="package-header" class="font-bold text-blue-700 text-6xl text-center"></p>
         <div class="inline-flex items-center justify-center w-full">
             <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded dark:bg-gray-700">
             <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -636,11 +541,11 @@
             <table class="table-fixed border-r border-l border-blue-700 w-full">
                 <thead>
                     <tr class="bg-blue-700 text-2xl text-white">
-                        <th class="py-8">Package</th>
-                        <th>Drop Point</th>
-                        <th>Car</th>
-                        <th>Amount (THB)</th>
-                        <th>Amount (Day)</th>
+                        <th id="package-table-package" class="py-8"></th>
+                        <th id="package-table-drop-point"></th>
+                        <th id="package-table-car"></th>
+                        <th id="package-table-price"></th>
+                        <th id="package-table-day"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -675,41 +580,16 @@
                 </tbody>
             </table>
         </div>
-        <p class="text-xl text-blue-700 text-center mb-4">
-            Pricing is calculated based on the active customer(drop-point) in the system. The cost is summarized monthly
-            on
-            the 1st day, using the maximum number of <u class="inline underline">active customer(drop-point)</u> in that
-            previous month. <b class="inline font-bold">Service fee</b> will
-            <b class="inline font-bold">automatically deduct</b> from your credit-card on <b
-                class="inline font-bold">every 16th of month.</b>
-        </p>
-        <p class="text-lg text-blue-700 mb-4"><b class="inline font-bold">For example;</b> Factory A has maximum active
-            customers in July 100 drop-point. 1st August, the service fee will be calculated as below.
-            <br />
-            <b class="inline font-bold">active customer * package price* day * VAT7%* Service charge 3.65% = service
-                fee</b> 100*0.38THB*31*1.07*1.0365 = <b class="inline font-bold">1,306.46</b> THB
-        </p>
+        <p id="package-pricing-description-1" class="text-xl text-blue-700 text-center mb-4"></p>
+        <p id="package-pricing-description-2" class="text-lg text-blue-700 text-center mb-4"></p>
         <hr class="w-48 h-1 mx-auto my-4 bg-blue-700 border-0 rounded md:my-10 dark:bg-gray-700">
         <div class="flex flex-col">
-            <p class="font-bold text-xl text-blue-700 text-left mb-4">
-                Service Scope:
-            </p>
+            <p id="package-service-header" class="font-bold text-xl text-blue-700 text-left mb-4"></p>
             <ul class="space-y-2 text-xl text-blue-700 text-left list-disc list-inside dark:text-gray-400">
-                <li>
-                    The platform is available for use and supports 24/7 operations with a 99.999% Up-time Warranty.
-                </li>
-                <li>
-                    Support teams are available for assistance, consultation, and user training on regular business days
-                    from 8:00 AM
-                    to 5:00 PM.
-                </li>
-                <li>
-                    The development team works to improve efficiency and introduce new functionalities to meet user
-                    requirements.
-                </li>
-                <li>
-                    Daily and monthly data backups are performed to ensure data redundancy.
-                </li>
+                <li id="package-service-1"></li>
+                <li id="package-service-2"></li>
+                <li id="package-service-3"></li>
+                <li id="package-service-4"></li>
             </ul>
         </div>
     </div>
@@ -717,11 +597,12 @@
     <!-- Contact Us Section -->
     <div id="ice-contact-us" class="flex flex-col justify-center p-16 lg:p-36 bg-odd">
         <div data-aos="fade-down" data-aos-duration="1000">
-            <p class="font-bold text-blue-700 text-6xl text-left mb-4">Contact Us</p>
+            <p id="contact-us-header" class="font-bold text-blue-700 text-6xl text-left mb-4"></p>
             <hr class="w-full h-1 my-4 bg-blue-700 border-0 rounded md:my-10 dark:bg-gray-700">
             <form class="contact-form" action="javascript:sendMail();">
                 <div class="mb-4">
-                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                    <label id="contact-us-name" for="name"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
                     <div class="flex">
                         <span
                             class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
@@ -737,7 +618,8 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label for="tel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tel</label>
+                    <label id="contact-us-tel" for="tel"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
                     <div class="flex">
                         <span
                             class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
@@ -754,8 +636,8 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label for="email"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail</label>
+                    <label id="contact-us-email" for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
                     <div class="flex">
                         <span
                             class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
@@ -771,15 +653,15 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label for="message"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+                    <label id="contact-us-message" for="message"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
                     <textarea id="message" rows="4"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Leave your message here." required></textarea>
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                    <button type="submit"
-                        class="text-white bg-blue-700 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
+                    <button id="contact-us-submit" type="submit"
+                        class="text-white bg-blue-700 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"></button>
                 </div>
             </form>
         </div>
@@ -801,37 +683,33 @@
             <ul class="py-2 font-bold text-lg text-blue-700 text-center dark:text-gray-200"
                 aria-labelledby="dropdownTopButton">
                 <li>
-                    <a onclick="moveToSection('ice-intro');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
+                    <a id="menu-mobile-1" onclick="moveToSection('ice-intro');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <li>
-                    <a onclick="moveToSection('ice-problem');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Have you
-                        ever ?</a>
+                    <a id="menu-mobile-2" onclick="moveToSection('ice-problem');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <li>
-                    <a onclick="moveToSection('ice-process');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Process</a>
+                    <a id="menu-mobile-3" onclick="moveToSection('ice-about-us');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <li>
-                    <a onclick="moveToSection('ice-about-us');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
-                        Us</a>
+                    <a id="menu-mobile-4" onclick="moveToSection('ice-process');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <li>
-                    <a onclick="moveToSection('ice-ours-platform');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ours
-                        Platform</a>
+                    <a id="menu-mobile-5" onclick="moveToSection('ice-ours-platform');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <li>
-                    <a onclick="moveToSection('ice-customer-pain');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Customer
-                        Pain</a>
+                    <a id="menu-mobile-6" onclick="moveToSection('ice-customer-pain');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <!-- <li>
@@ -841,19 +719,18 @@
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700"> -->
                 <li>
-                    <a onclick="moveToSection('ice-stores');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Stores</a>
+                    <a id="menu-mobile-7" onclick="moveToSection('ice-stores');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <li>
-                    <a onclick="moveToSection('ice-package');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Package</a>
+                    <a id="menu-mobile-8" onclick="moveToSection('ice-package');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded dark:bg-gray-700">
                 <li>
-                    <a onclick="moveToSection('ice-contact-us');"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contact
-                        Us</a>
+                    <a id="menu-mobile-9" onclick="moveToSection('ice-contact-us');"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                 </li>
             </ul>
         </div>
@@ -862,7 +739,7 @@
     <!-- Footer Section -->
     <footer class="flex flex-col-reverse lg:flex-row bg-blue-700">
         <div class="flex flex-col space-y-4 justify-center items-center w-full py-4 lg:py-0">
-            <p class="text-2xl text-white font-bold">Information</p>
+            <p id="information-footer" class="text-2xl text-white font-bold"></p>
             <hr class="w-2/5 h-1 my-4 bg-white border-0 rounded md:my-10 dark:bg-gray-700">
             <div class="flex flex-col justify-center items-center text-white">
                 <svg class="w-12 h-12 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -900,5 +777,11 @@
         </div>
     </footer>
 </body>
+
+<script>
+    (async () => {
+        await languages('th');
+    })();
+</script>
 
 </html>
