@@ -6,13 +6,13 @@ var language = [
     },
     {
         "id": "menu-2",
-        "th": "เคยหรือไม่ ?",
+        "th": "มีปัญหาเหล่านี้หรือไม่ ?",
         "en": "Have you ever ?"
     },
     {
         "id": "menu-3",
-        "th": "เกี่ยวกับเรา",
-        "en": "About Us"
+        "th": "IFX",
+        "en": "IFX"
     },
     {
         "id": "menu-4",
@@ -31,8 +31,8 @@ var language = [
     },
     {
         "id": "menu-7",
-        "th": "สาขา",
-        "en": "Stores"
+        "th": "เสียงจากผู้ใช้งานจริง",
+        "en": "Review Customers"
     },
     {
         "id": "menu-8",
@@ -43,6 +43,11 @@ var language = [
         "id": "menu-9",
         "th": "ติดต่อเรา",
         "en": "Contact Us"
+    },
+    {
+        "id": "menu-10",
+        "th": "เพิ่มประสิทธิภาพด้วย IFX",
+        "en": "Enhance the efficiency of your factory with IFX."
     },
     {
         "id": "menu-privacy",
@@ -61,13 +66,13 @@ var language = [
     },
     {
         "id": "menu-mobile-2",
-        "th": "เคยหรือไม่ ?",
+        "th": "มีปัญหาเหล่านี้หรือไม่ ?",
         "en": "Have you ever ?"
     },
     {
         "id": "menu-mobile-3",
-        "th": "เกี่ยวกับเรา",
-        "en": "About Us"
+        "th": "IFX",
+        "en": "IFX"
     },
     {
         "id": "menu-mobile-4",
@@ -86,8 +91,8 @@ var language = [
     },
     {
         "id": "menu-mobile-7",
-        "th": "สาขา",
-        "en": "Stores"
+        "th": "เสียงจากผู้ใช้งานจริง",
+        "en": "Review Customers"
     },
     {
         "id": "menu-mobile-8",
@@ -98,6 +103,11 @@ var language = [
         "id": "menu-mobile-9",
         "th": "ติดต่อเรา",
         "en": "Contact Us"
+    },
+    {
+        "id": "menu-mobile-10",
+        "th": "เพิ่มประสิทธิภาพโรงงานคุณด้วย IFX",
+        "en": "Enhance the efficiency of your factory with IFX."
     },
     {
         "id": "intro-header",
@@ -151,7 +161,7 @@ var language = [
     },
     {
         "id": "problem-5",
-        "th": "- อำนาจต่อรองน้อย ต้องง้อ",
+        "th": "- อำนาจต่อรองน้อย ต้องง้อคนขับ",
         "en": "- Limited negotiation power, have to yield."
     },
     {
@@ -185,9 +195,14 @@ var language = [
         "en": "- New drivers, unaware of routes and shop locations."
     },
     {
+        "id": "problem-12",
+        "th": "- ลงทุนเพิ่ม แต่รายได้ไม่เพิ่ม",
+        "en": "- Increased investment, but income did not increase."
+    },
+    {
         "id": "about-us-header",
-        "th": "เกี่ยวกับเรา",
-        "en": "About US"
+        "th": "Ice Factory Excellence(IFX)",
+        "en": "Ice Factory Excellence(IFX)"
     },
     {
         "id": "about-us-description",
@@ -325,6 +340,11 @@ var language = [
         "en": "- Check driver expenses."
     },
     {
+        "id": "performance-header",
+        "th": "เพิ่มประสิทธิภาพโรงงานคุณด้วย IFX",
+        "en": "Enhance the efficiency of your factory with IFX."
+    },
+    {
         "id": "platform-header",
         "th": "แพลตฟอร์มของเรา",
         "en": "Ours Platform"
@@ -366,8 +386,8 @@ var language = [
     },
     {
         "id": "stores-header",
-        "th": "สาขา",
-        "en": "Stores"
+        "th": "เสียงจากผู้ใช้งานจริง",
+        "en": "Review Customers"
     },
     {
         "id": "stores-review",

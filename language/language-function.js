@@ -4,10 +4,11 @@ function languages(lang) {
     document.getElementById("menu-3").innerText = language.find(item => item.id === "menu-3")[lang];
     document.getElementById("menu-4").innerText = language.find(item => item.id === "menu-4")[lang];
     document.getElementById("menu-5").innerText = language.find(item => item.id === "menu-5")[lang];
-    document.getElementById("menu-6").innerText = language.find(item => item.id === "menu-6")[lang];
+    // document.getElementById("menu-6").innerText = language.find(item => item.id === "menu-6")[lang];
     document.getElementById("menu-7").innerText = language.find(item => item.id === "menu-7")[lang];
     document.getElementById("menu-8").innerText = language.find(item => item.id === "menu-8")[lang];
     document.getElementById("menu-9").innerText = language.find(item => item.id === "menu-9")[lang];
+    document.getElementById("menu-10").innerText = language.find(item => item.id === "menu-10")[lang];
     document.getElementById("menu-privacy").innerText = language.find(item => item.id === "menu-privacy")[lang];
     document.getElementById("menu-login").innerText = language.find(item => item.id === "menu-login")[lang];
     document.getElementById("menu-mobile-1").innerText = language.find(item => item.id === "menu-mobile-1")[lang];
@@ -15,10 +16,11 @@ function languages(lang) {
     document.getElementById("menu-mobile-3").innerText = language.find(item => item.id === "menu-mobile-3")[lang];
     document.getElementById("menu-mobile-4").innerText = language.find(item => item.id === "menu-mobile-4")[lang];
     document.getElementById("menu-mobile-5").innerText = language.find(item => item.id === "menu-mobile-5")[lang];
-    document.getElementById("menu-mobile-6").innerText = language.find(item => item.id === "menu-mobile-6")[lang];
+    // document.getElementById("menu-mobile-6").innerText = language.find(item => item.id === "menu-mobile-6")[lang];
     document.getElementById("menu-mobile-7").innerText = language.find(item => item.id === "menu-mobile-7")[lang];
     document.getElementById("menu-mobile-8").innerText = language.find(item => item.id === "menu-mobile-8")[lang];
     document.getElementById("menu-mobile-9").innerText = language.find(item => item.id === "menu-mobile-9")[lang];
+    document.getElementById("menu-mobile-10").innerText = language.find(item => item.id === "menu-mobile-10")[lang];
     document.getElementById("intro-header").innerText = language.find(item => item.id === "intro-header")[lang];
     document.getElementById("intro-description").innerText = language.find(item => item.id === "intro-description")[lang];
     document.getElementById("problem-header").innerText = language.find(item => item.id === "problem-header")[lang];
@@ -64,6 +66,7 @@ function languages(lang) {
     document.getElementById("process-18").innerText = language.find(item => item.id === "process-18")[lang];
     document.getElementById("process-19").innerText = language.find(item => item.id === "process-19")[lang];
     document.getElementById("process-20").innerText = language.find(item => item.id === "process-20")[lang];
+    document.getElementById("performance-header").innerText = language.find(item => item.id === "performance-header")[lang];
     document.getElementById("platform-header").innerText = language.find(item => item.id === "platform-header")[lang];
     document.getElementById("platform-customer").innerText = language.find(item => item.id === "platform-customer")[lang];
     document.getElementById("platform-production-delivery").innerText = language.find(item => item.id === "platform-production-delivery")[lang];
@@ -71,7 +74,7 @@ function languages(lang) {
     document.getElementById("platform-customer-description").innerText = language.find(item => item.id === "platform-customer-description")[lang];
     document.getElementById("platform-production-delivery-description").innerText = language.find(item => item.id === "platform-production-delivery-description")[lang];
     document.getElementById("platform-sales-accounting-description").innerText = language.find(item => item.id === "platform-sales-accounting-description")[lang];
-    document.getElementById("customer-pain-problem").innerText = language.find(item => item.id === "customer-pain-problem")[lang];
+    // document.getElementById("customer-pain-problem").innerText = language.find(item => item.id === "customer-pain-problem")[lang];
     document.getElementById("stores-header").innerText = language.find(item => item.id === "stores-header")[lang];
     document.getElementById("stores-review").innerText = language.find(item => item.id === "stores-review")[lang];
     document.getElementById("package-header").innerText = language.find(item => item.id === "package-header")[lang];
