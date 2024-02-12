@@ -40,6 +40,7 @@ function languages(lang) {
     document.getElementById("problem-11").innerText = language.find(item => item.id === "problem-11")[lang];
     document.getElementById("about-us-header").innerText = language.find(item => item.id === "about-us-header")[lang];
     document.getElementById("about-us-description").innerText = language.find(item => item.id === "about-us-description")[lang];
+    document.getElementById("process-description").innerText = language.find(item => item.id === "process-description")[lang];
     document.getElementById("process-owner").innerText = language.find(item => item.id === "process-owner")[lang];
     document.getElementById("process-customer").innerText = language.find(item => item.id === "process-customer")[lang];
     document.getElementById("process-sales").innerText = language.find(item => item.id === "process-sales")[lang];

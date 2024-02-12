@@ -201,13 +201,18 @@ var language = [
     },
     {
         "id": "about-us-header",
-        "th": "Ice Factory Excellence(IFX)",
-        "en": "Ice Factory Excellence(IFX)"
+        "th": "ให้ IFX ช่วยคุณ",
+        "en": "Let's IFX help you."
     },
     {
         "id": "about-us-description",
         "th": "IFX (Ice Factory Excellence) คือ แพลตฟอร์มสำหรับบริหารโรงงานน้ำแข็งแบบครบวงจร ตั้งแต่กระบวนการขาย การผลิต การจัดส่งคลังสินค้าและบัญชี ที่ถูกพัฒนาและจดลิขสิทธิ์โดยบริษัท อินเวสฮับ จำกัด บริษัทฯที่เป็นแหล่งรวมผู้เชี่ยวชาญที่มีประสบการณ์ด้านการออกแบบ และพัฒนาระบบ เพื่อแก้ปัญหาให้กับองค์กรชั้นนำในประเทศไทยมามากกว่า 15 ปี โดยบริษัทฯมีจุดมุ่งหมายคือนําระบบไอทีเข้ามาช่วยเหลือผู้ประกอบการให้สามารถบริหารธุรกิจและเติบโตได้อย่างยั่งยืน",
         "en": "At Inveshub, we provide a comprehensive platform to manage your ice factory. Our platform (IFX) includes customer, sales, production, delivery and accounting. All in one place. We understand the challenges of running an ice factory, and we're here to help."
+    },
+    {
+        "id": "process-description",
+        "th": "ระบบเดียวที่ครอบคลุมทุกด้านของโรงงาน",
+        "en": "The one system for covers every aspect of the factory."
     },
     {
         "id": "process-owner",
