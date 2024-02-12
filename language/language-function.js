@@ -87,6 +87,10 @@ function languages(lang) {
     document.getElementById("package-service-2").innerText = language.find(item => item.id === "package-service-2")[lang];
     document.getElementById("package-service-3").innerText = language.find(item => item.id === "package-service-3")[lang];
     document.getElementById("package-service-4").innerText = language.find(item => item.id === "package-service-4")[lang];
+    document.getElementById("package-benefit-sales").innerText = language.find(item => item.id === "package-benefit-sales")[lang];
+    document.getElementById("package-benefit-review").innerText = language.find(item => item.id === "package-benefit-review")[lang];
+    document.getElementById("package-benefit-save-cost").innerText = language.find(item => item.id === "package-benefit-save-cost")[lang];
+    document.getElementById("package-benefit-reference").innerText = language.find(item => item.id === "package-benefit-reference")[lang];
     document.getElementById("contact-us-header").innerText = language.find(item => item.id === "contact-us-header")[lang];
     document.getElementById("contact-us-name").innerText = language.find(item => item.id === "contact-us-name")[lang];
     document.getElementById("contact-us-tel").innerText = language.find(item => item.id === "contact-us-tel")[lang];

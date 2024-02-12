@@ -440,6 +440,26 @@ var language = [
         "en": "Daily and monthly data backups are performed to ensure data redundancy."
     },
     {
+        "id": "package-benefit-sales",
+        "th": "เพิ่มยอดขายสูงสุด 30%",
+        "en": "Increase maximum sales by 30%."
+    },
+    {
+        "id": "package-benefit-review",
+        "th": "เพิ่มความพึงพอใจของลูกค้าถึง 90%",
+        "en": "Increase customer satisfaction by 90%"
+    },
+    {
+        "id": "package-benefit-save-cost",
+        "th": "ลดต้นทุนสูงถึง 10%",
+        "en": "Reduce costs by up to 10%."
+    },
+    {
+        "id": "package-benefit-reference",
+        "th": "อ้างอิง: ตัวแทนผู้ผลิตน้ำแข็งในภาคอีสาน และภาคใต้ที่ใช้งานระบบ",
+        "en": "Reference: Ice factory operators in the Northeastern and Southern regions using the system."
+    },
+    {
         "id": "contact-us-header",
         "th": "ติดต่อเรา",
         "en": "Contact Us"
