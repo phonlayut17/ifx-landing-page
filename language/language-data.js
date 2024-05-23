@@ -6,13 +6,13 @@ var language = [
     },
     {
         "id": "menu-2",
-        "th": "มีปัญหาเหล่านี้หรือไม่ ?",
-        "en": "Have you ever ?"
+        "th": "ปัญหา",
+        "en": "Problem"
     },
     {
         "id": "menu-3",
-        "th": "IFX",
-        "en": "IFX"
+        "th": "IFX คือ ?",
+        "en": "IFX ?"
     },
     {
         "id": "menu-4",
@@ -21,7 +21,7 @@ var language = [
     },
     {
         "id": "menu-5",
-        "th": "แพลตฟอร์มของเรา",
+        "th": "บริการของเรา",
         "en": "Ours Platform"
     },
     {
@@ -31,18 +31,18 @@ var language = [
     },
     {
         "id": "menu-7",
-        "th": "เสียงจากผู้ใช้งานจริง",
+        "th": "เสียงจากผู้ใช้งาน",
         "en": "Review Customers"
     },
     {
         "id": "menu-8",
-        "th": "แพคเกจ และเซอร์วิส",
-        "en": "Package & Service"
+        "th": "ราคา",
+        "en": "Pricing"
     },
     {
         "id": "menu-9",
-        "th": "ติดต่อเรา",
-        "en": "Contact Us"
+        "th": "ติดต่อ",
+        "en": "Contact"
     },
     {
         "id": "menu-10",
@@ -66,13 +66,13 @@ var language = [
     },
     {
         "id": "menu-mobile-2",
-        "th": "มีปัญหาเหล่านี้หรือไม่ ?",
-        "en": "Have you ever ?"
+        "th": "ปัญหา",
+        "en": "Problem"
     },
     {
         "id": "menu-mobile-3",
-        "th": "IFX",
-        "en": "IFX"
+        "th": "IFX คือ ?",
+        "en": "IFX ?"
     },
     {
         "id": "menu-mobile-4",
@@ -81,7 +81,7 @@ var language = [
     },
     {
         "id": "menu-mobile-5",
-        "th": "แพลตฟอร์มของเรา",
+        "th": "บริการของเรา",
         "en": "Ours Platform"
     },
     {
@@ -91,22 +91,22 @@ var language = [
     },
     {
         "id": "menu-mobile-7",
-        "th": "เสียงจากผู้ใช้งานจริง",
+        "th": "เสียงจากผู้ใช้งาน",
         "en": "Review Customers"
     },
     {
         "id": "menu-mobile-8",
-        "th": "แพคเกจ และเซอร์วิส",
-        "en": "Package & Service"
+        "th": "ราคา",
+        "en": "Pricing"
     },
     {
         "id": "menu-mobile-9",
-        "th": "ติดต่อเรา",
-        "en": "Contact Us"
+        "th": "ติดต่อ",
+        "en": "Contact"
     },
     {
         "id": "menu-mobile-10",
-        "th": "เพิ่มประสิทธิภาพโรงงานคุณด้วย IFX",
+        "th": "เพิ่มประสิทธิภาพด้วย IFX",
         "en": "Enhance the efficiency of your factory with IFX."
     },
     {

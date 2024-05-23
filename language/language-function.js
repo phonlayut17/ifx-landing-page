@@ -2,7 +2,7 @@ function languages(lang) {
     document.getElementById("menu-1").innerText = language.find(item => item.id === "menu-1")[lang];
     document.getElementById("menu-2").innerText = language.find(item => item.id === "menu-2")[lang];
     document.getElementById("menu-3").innerText = language.find(item => item.id === "menu-3")[lang];
-    document.getElementById("menu-4").innerText = language.find(item => item.id === "menu-4")[lang];
+    // document.getElementById("menu-4").innerText = language.find(item => item.id === "menu-4")[lang];
     document.getElementById("menu-5").innerText = language.find(item => item.id === "menu-5")[lang];
     // document.getElementById("menu-6").innerText = language.find(item => item.id === "menu-6")[lang];
     document.getElementById("menu-7").innerText = language.find(item => item.id === "menu-7")[lang];
@@ -14,7 +14,7 @@ function languages(lang) {
     document.getElementById("menu-mobile-1").innerText = language.find(item => item.id === "menu-mobile-1")[lang];
     document.getElementById("menu-mobile-2").innerText = language.find(item => item.id === "menu-mobile-2")[lang];
     document.getElementById("menu-mobile-3").innerText = language.find(item => item.id === "menu-mobile-3")[lang];
-    document.getElementById("menu-mobile-4").innerText = language.find(item => item.id === "menu-mobile-4")[lang];
+    // document.getElementById("menu-mobile-4").innerText = language.find(item => item.id === "menu-mobile-4")[lang];
     document.getElementById("menu-mobile-5").innerText = language.find(item => item.id === "menu-mobile-5")[lang];
     // document.getElementById("menu-mobile-6").innerText = language.find(item => item.id === "menu-mobile-6")[lang];
     document.getElementById("menu-mobile-7").innerText = language.find(item => item.id === "menu-mobile-7")[lang];

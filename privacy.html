@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inveshub - Ice Factory Excellence</title>
+    <link rel="icon" type="image/x-icon" href="https://www.inveshub.co/main_page/img/main/IFX_icon_logo.png">
+
+    <meta charset="UTF-8">
+
+    <!--  Css Other -->
+    <link rel="stylesheet" href="src/style/main.css">
+
+    <!-- Aos Animation -->
+    <link href="https://www.inveshub.co/main_page/lib/aos.css" rel="stylesheet">
+    <script src="https://www.inveshub.co/main_page/lib/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 650,
+                once: false
+            });
+        });
+    </script>
+
+    <!-- Tailwind Css -->
+    <script src="https://www.inveshub.co/main_page/lib/tailwind.js"></script>
+    <script src="https://www.inveshub.co/main_page/lib/flowbite.js"></script>
+
+    <!-- Language -->
+    <script src="https://www.inveshub.co/main_page/language/language-privacy-data.js"></script>
+    <script src="https://www.inveshub.co/main_page/language/language-privacy-function.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="bg-intro border-gray-200">
+        <div class="max-w-full flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="flex flex-row space-x-8">
+                <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="https://www.inveshub.co/main_page/img/main/IFX_logo_full.png" class="h-16 w-auto"
+                        alt="IFX Logo" />
+                </a>
+                <div class="flex flex-row space-x-4 xl:order-2">
+                    <button onclick="languages('en');"><img src="https://www.inveshub.co/main_page/img/main/en.png"
+                            class="w-8 h-8" alt="EN" /></button>
+                    <button onclick="languages('th');"><img src="https://www.inveshub.co/main_page/img/main/th.png"
+                            class="w-8 h-8" alt="TH" /></button>
+                </div>
+            </div>
+            <div class="hidden w-full md:block md:w-auto flex flex-row" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row rtl:space-x-reverse">
+                    <li>
+                        <a id="privacy-menu-home" href="https://www.inveshub.co/main_page/"
+                            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"></a>
+                    </li>
+                    <li>
+                        <a id="privacy-menu-login" href="https://www.inveshub.co"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+        </button>
+        </div>
+    </nav>
+
+    <!-- Body Section -->
+    <!-- Policy Section -->
+    <div id="ice-policy" class="flex flex-col xl:flex-row h-full justify-center items-center p-16 lg:p-24  bg-odd"
+        data-aos="fade-up" data-aos-duration="1000">
+        <div class="flex flex-col w-1/2 text-center justify-center items-center">
+            <img src="https://www.inveshub.co/main_page/img/main/ice-intro.png" class="w-fit" alt="Intro" />
+            <p id="privacy-header" class="font-bold text-blue-700 xl:text-white text-4xl mb-4"></p>
+            <p id="privacy-description" class="font-medium text-blue-700 xl:text-white text-xl"></p>
+        </div>
+        <div class="flex flex-col w-1/2 text-left">
+            <div class="w-full p-4 m-2 bg-white border border-blue-700 rounded-lg shadow">
+                <div class="flex flex-row justify-between items-center">
+                    <p id="privacy-intro-header" class="text-xl font-bold text-blue-700"></p>
+                    <img src="https://www.inveshub.co/main_page/img/main/ice-privacy-info.png" class="w-8 text-blue-700"
+                        onclick="openDescription('intro')" />
+                </div>
+                <div id="intro" class="mt-4 hidden">
+                    <p id="privacy-intro-description" class="font-normal text-blue-700"></p>
+                </div>
+            </div>
+            <div class="w-full p-4 m-2 bg-white border border-blue-700 rounded-lg shadow">
+                <div class="flex flex-row justify-between items-center">
+                    <p id="privacy-scope-header" class="text-xl font-bold text-blue-700"></p>
+                    <img src="https://www.inveshub.co/main_page/img/main/ice-privacy-info.png" class="w-8 text-blue-700"
+                        onclick="openDescription('scope')" />
+                </div>
+                <div id="scope" class="mt-4 hidden">
+                    <p id="privacy-scope-description" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-people" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-people-1" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-people-2" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-people-3" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-people-4" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-people-5" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-other" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-scope-description-sum" class="font-normal text-blue-700"></p>
+                </div>
+            </div>
+            <div class="w-full p-4 m-2 bg-white border border-blue-700 rounded-lg shadow">
+                <div class="flex flex-row justify-between items-center">
+                    <p id="privacy-user-header" class="text-xl font-bold text-blue-700"></p>
+                    <img src="https://www.inveshub.co/main_page/img/main/ice-privacy-info.png" class="w-8 text-blue-700"
+                        onclick="openDescription('user')" />
+                </div>
+                <div id="user" class="mt-4 hidden">
+                    <p id="privacy-user-description-1" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-user-description-2" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-user-description-3" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-user-description-4" class="font-normal text-blue-700"></p>
+                </div>
+            </div>
+            <div class="w-full p-4 m-2 bg-white border border-blue-700 rounded-lg shadow">
+                <div class="flex flex-row justify-between items-center">
+                    <p id="privacy-edit-header" class="text-xl font-bold text-blue-700"></p>
+                    <img src="https://www.inveshub.co/main_page/img/main/ice-privacy-info.png" class="w-8 text-blue-700"
+                        onclick="openDescription('edit')" />
+                </div>
+                <div id="edit" class="mt-4 hidden">
+                    <p id="privacy-edit-description" class="font-normal text-blue-700"></p>
+                </div>
+            </div>
+            <div class="w-full p-4 m-2 bg-white border border-blue-700 rounded-lg shadow">
+                <div class="flex flex-row justify-between items-center">
+                    <p id="privacy-time-header" class="text-xl font-bold text-blue-700"></p>
+                    <img src="https://www.inveshub.co/main_page/img/main/ice-privacy-info.png" class="w-8 text-blue-700"
+                        onclick="openDescription('time')" />
+                </div>
+                <div id="time" class="mt-4 hidden">
+                    <p id="privacy-time-description" class="font-normal text-blue-700"></p>
+                </div>
+            </div>
+            <div class="w-full p-4 m-2 bg-white border border-blue-700 rounded-lg shadow">
+                <div class="flex flex-row justify-between items-center">
+                    <p id="privacy-contact-header" class="text-xl font-bold text-blue-700"></p>
+                    <img src="https://www.inveshub.co/main_page/img/main/ice-privacy-info.png" class="w-8 text-blue-700"
+                        onclick="openDescription('contact')" />
+                </div>
+                <div id="contact" class="mt-4 hidden">
+                    <p id="privacy-contact-description" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-contact-data" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-contact-company" class="font-normal text-blue-700 mb-2"></p>
+                    <p id="privacy-contact-location" class="font-normal text-blue-700"></p>
+                </div>
+            </div>
+            <div class="w-full p-4 m-2 bg-white border border-blue-700 rounded-lg shadow">
+                <div class="flex flex-row justify-between items-center">
+                    <p id="privacy-open-data-header" class="text-xl font-bold text-blue-700"></p>
+                    <img src="https://www.inveshub.co/main_page/img/main/ice-privacy-info.png" class="w-8 text-blue-700"
+                        onclick="openDescription('open-data')" />
+                </div>
+                <div id="open-data" class="mt-4 hidden">
+                    <p id="privacy-open-data-description" class="font-normal text-blue-700"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="flex flex-col-reverse lg:flex-row bg-blue-700">
+        <div class="flex flex-col space-y-4 justify-center items-center w-full py-4 lg:py-0">
+            <p id="information-footer" class="text-2xl text-white font-bold"></p>
+            <hr class="w-2/5 h-1 my-4 bg-white border-0 rounded md:my-10">
+            <div class="flex flex-col justify-center items-center text-white">
+                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M12 2a8 8 0 0 1 6.6 12.6l-.1.1-.6.7-5.1 6.2a1 1 0 0 1-1.6 0L6 15.3l-.3-.4-.2-.2v-.2A8 8 0 0 1 11.8 2Zm3 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <p class="text-xl">5/1108 Prachachuen village Samakee rd. Soi 63. Bang-tarad</p>
+                <p class="text-xl">Pakkret Nonthaburi 11120 TAX ID: 0195558001681</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-white">
+                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M5 4c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2 1 1 0 1 0 0-2Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <p class="text-xl">081 593 6741</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-white">
+                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.5a6 6 0 0 1 1.5 4v4a1 1 0 1 1-2 0v-4a4 4 0 0 0-4-4h-.5C5 6 3 8 3 10.5V16c0 .6.4 1 1 1h7v3c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-3h5c.6 0 1-.4 1-1v-6a4 4 0 0 0-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z" />
+                </svg>
+                <p class="text-xl">inveshub@gmail.com</p>
+            </div>
+        </div>
+        <div class="w-full">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.2707362437113!2d100.53908977678854!3d13.882753294244829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e283cdaf15ffe3%3A0xf416c3ecba3b2458!2sInveshub!5e0!3m2!1sen!2sth!4v1688482397211!5m2!1sen!2sth"
+                class="w-full h-96" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+</body>
+
+<script>
+    (async () => {
+        await languages('th');
+    })();
+
+    function openDescription(id) {
+        var element = document.getElementById(id);
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+            element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            element.classList.add('hidden');
+        }
+    }
+</script>
+
+</html>
