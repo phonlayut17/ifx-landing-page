@@ -1,4 +1,4 @@
-var language = [
+﻿var language = [
     {
         "id": "menu-1",
         "th": "หน้าหลัก",
@@ -107,17 +107,17 @@ var language = [
     {
         "id": "menu-mobile-10",
         "th": "เพิ่มประสิทธิภาพด้วย IFX",
-        "en": "Enhance the efficiency of your factory with IFX."
+        "en": "Improve the efficiency of your factory with IFX."
     },
     {
         "id": "intro-header",
-        "th": "เพิ่มประสิทธิภาพการจัดการโรงงานน้ำแข็งของคุณ",
-        "en": "Streamline your Ice Factory Operations"
+        "th": "สร้างมาตรฐานการจัดการโรงงานน้ำแข็งของคุณ มุ่งสู่ยุค 4.0",
+        "en": "Standardize your Ice Factory Operations 4.0"
     },
     {
         "id": "intro-description",
-        "th": "จัดการลูกค้า การขาย การผลิต การจัดส่ง และการบัญชีอย่างมีประสิทธิภาพทั้งหมดในแพลตฟอร์มเดียว",
-        "en": "Efficiently manage customer, sales, production, delivery and accounting all in One platform"
+        "th": "ด้วยระบบบริหารจัดการแบบครบวงจร ตรวจสอบได้ ตลอดทั้งกระบวนการได้ตั้งแต่น้ำแข็งในสต็อค จนส่งถึงมือลูกค้า ครอบคลุมทุกมิติของการจัดการที่คุณต้องการและเสริมสมรรถภาพด้วยเทคโนโลยี AI ช่วยในการตรวจสอบ",
+        "en": "With a full-circle management system, covering the entire process from ice in stock to delivery to customers, covering all dimensions of management that you need and enhance performance with AI technology."
     },
     {
         "id": "problem-header",
@@ -142,7 +142,7 @@ var language = [
     {
         "id": "problem-1",
         "th": "- ต้องอยู่ประจำ ทิ้งโรงงานไม่ได้",
-        "en": "- Must stay permanently, cannot abandon the factory."
+        "en": "- Tethered, cannot abandon the factory."
     },
     {
         "id": "problem-2",
@@ -202,7 +202,7 @@ var language = [
     {
         "id": "about-us-header",
         "th": "ให้ IFX ช่วยคุณ",
-        "en": "Let's IFX help you."
+        "en": "Let IFX help you."
     },
     {
         "id": "about-us-description",
@@ -411,7 +411,7 @@ var language = [
     },
     {
         "id": "package-table-drop-point",
-        "th": "จุดบริการ",
+        "th": "จุดส่ง/ร้านค้า",
         "en": "Drop Point"
     },
     {
@@ -421,13 +421,13 @@ var language = [
     },
     {
         "id": "package-table-price",
-        "th": "ราคา (บาท)",
-        "en": "Amount (THB)"
+        "th": "ค่าบริการต่อวัน(บาท/จุด)",
+        "en": "Daily Amount (THB)"
     },
     {
         "id": "package-table-day",
-        "th": "จำนวน (วัน)",
-        "en": "Amount (Day)"
+        "th": "ค่าบริการต่อเดือน(บาท/จุด)",
+        "en": "Monthly Amount (THB)"
     },
     {
         "id": "package-service-header",
@@ -441,7 +441,7 @@ var language = [
     },
     {
         "id": "package-pricing-description-2",
-        "th": "ตัวอย่างเช่น; โรงงาน A มีลูกค้าที่ใช้บริการมากที่สุดในเดือนกรกฎาคม 100 drop-point เมื่อถึงวันที่ 1 สิงหาคม ค่าบริการจะถูกคำนวณดังนี้: จำนวนลูกค้าที่ใช้บริการ * ราคาแพ็คเกจ * จำนวนวัน * VAT 7% * ค่าบริการ 3.65% = ค่าบริการ 100 * 0.38 บาท * 31 * 1.07 * 1.0365 = 1,306.46 บาท",
+        "th": "ตัวอย่างเช่น; โรงงาน A มีลูกค้าที่ใช้บริการมากที่สุดในเดือนกรกฎาคม 100 drop-point เมื่อถึงวันที่ 1 สิงหาคม ค่าบริการจะถูกคำนวณดังนี้: จำนวนลูกค้าที่ใช้บริการ * ราคาแพ็คเกจ * จำนวนวัน * VAT 7% * ค่าบริการ 3.65% = ค่าบริการ 100 * 0.45 บาท * 31 * 1.07 * 1.0365 = 1,547.132 บาท",
         "en": "For example; Factory A has maximum active customers in July 100 drop-point. 1st August, the service fee will be calculated as below. active customer * package price * day * VAT7%* Service charge 3.65% = service fee 100*0.38THB*31*1.07*1.0365 = 1,306.46 THB"
     },
     {
@@ -466,8 +466,8 @@ var language = [
     },
     {
         "id": "package-benefit-sales",
-        "th": "เพิ่มยอดขายสูงสุด 30%",
-        "en": "Increase maximum sales by 30%."
+        "th": "เพิ่มรายได้สูงสุด 30%",
+        "en": "Increase revenues up to 30%."
     },
     {
         "id": "package-benefit-review",
