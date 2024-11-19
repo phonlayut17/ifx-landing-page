@@ -71,7 +71,7 @@
                 data.forEach(item => {
                     var htmlCard = '<div class="flex flex-col w-full">';
                     htmlCard += '<div class="flex flex-row justify-center items-center mb-4">';
-                    htmlCard += '<img src="https://www.inveshub.co/ifx/main_page/img/main/ice-feedback.png" class="w-24 h-24" alt="Feedback" />';
+                    htmlCard += '<img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-feedback.png" class="w-24 h-24" alt="Feedback" />';
                     htmlCard += '<div class="flex flex-col w-1/2 justify-center">';
                     htmlCard += '<p class="font-medium text-blue-700 text-medium mb-4">' + item.review;
                     htmlCard += '</p>';
@@ -130,7 +130,7 @@
                 // ['th-un', 86], ['th-nb', 87]
             ];
 
-            Highcharts.mapChart('ice-location-province', {
+            Highcharts.mapChart('ifx-location-province', {
                 chart: {
                     map: topology
                 },
@@ -203,58 +203,58 @@
                     <ul
                         class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
                         <li>
-                            <a id="menu-1" onclick="moveToSection('ice-intro');"
+                            <a id="menu-1" onclick="moveToSection('ifx-intro');"
                                 class="block py-2 font-bold text-medium text-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 "
                                 aria-current="page"></a>
                         </li>
                         <li>
-                            <a id="menu-2" onclick="moveToSection('ice-problem');"
+                            <a id="menu-2" onclick="moveToSection('ifx-problem');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li>
                         <li>
-                            <a id="menu-3" onclick="moveToSection('ice-about-us');"
+                            <a id="menu-3" onclick="moveToSection('ifx-about-us');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li>
                         <!-- <li>
-                            <a id="menu-4" onclick="moveToSection('ice-process');"
+                            <a id="menu-4" onclick="moveToSection('ifx-process');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li> -->
                         <li>
-                            <a id="menu-10" onclick="moveToSection('ice-performance');"
+                            <a id="menu-10" onclick="moveToSection('ifx-performance');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li>
                         <li>
-                            <a id="menu-5" onclick="moveToSection('ice-ours-platform');"
+                            <a id="menu-5" onclick="moveToSection('ifx-ours-platform');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li>
                         <!-- <li>
-                            <a id="menu-6" onclick="moveToSection('ice-customer-pain');"
+                            <a id="menu-6" onclick="moveToSection('ifx-customer-pain');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li> -->
                         <!-- <li>
-                            <a onclick="moveToSection('ice-customer-feedback');"
+                            <a onclick="moveToSection('ifx-customer-feedback');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Customer
                                 Feedback</a>
                         </li> -->
                         <li>
-                            <a id="menu-7" onclick="moveToSection('ice-stores');"
+                            <a id="menu-7" onclick="moveToSection('ifx-stores');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li>
                         <li>
-                            <a id="menu-8" onclick="moveToSection('ice-package');"
+                            <a id="menu-8" onclick="moveToSection('ifx-package');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li>
                         <li>
-                            <a id="menu-9" onclick="moveToSection('ice-contact-us');"
+                            <a id="menu-9" onclick="moveToSection('ifx-contact-us');"
                                 class="block py-2 font-bold text-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"></a>
                         </li>
                     </ul>
                 </div>
                 <div class="flex flex-row space-x-4 2xl:order-2">
                     <button onclick="languages('en'); playStoreIcon('en');"><img src="https://www.inveshub.co/ifx/main_page/img/main/en.png" class="w-8 h-8"
-                            alt="EN" /></button>
+                            alt="IFX EN" /></button>
                     <button onclick="languages('th'); playStoreIcon('th');"><img src="https://www.inveshub.co/ifx/main_page/img/main/th.png" class="w-8 h-8"
-                            alt="TH" /></button>
+                            alt="IFX TH" /></button>
                 </div>
             </div>
             <button data-collapse-toggle="navbar-default" type="button"
@@ -285,25 +285,25 @@
 
     <!-- Body Section -->
     <!-- Intro Section -->
-    <div id="ice-intro" class="flex flex-col h-fit xl:h-screen xl:justify-start xl:justify-center items-center p-16 lg:p-24 bg-odd"
+    <div id="ifx-intro" class="flex flex-col h-fit xl:h-screen xl:justify-start xl:justify-center items-center p-16 lg:p-24 bg-odd"
         data-aos="fade-up" data-aos-duration="1000">
-        <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-intro.png" class="w-fit" alt="Intro" />
+        <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-intro.png" class="w-fit" alt="IFX Intro" />
         <div class="flex flex-col text-center">
             <p id="intro-header" class="font-bold text-white text-6xl mb-4"></p>
             <p id="intro-description" class="font-medium text-white text-xl pb-8"></p>
         </div>
         <div class="flex flex-col text-center">
             <div id="play-store-en" class="hidden">
-                <a href="https://play.google.com/store/apps/details?id=ifx.app" target="_blank"><img src="https://www.inveshub.co/ifx/main_page/img/main/play-store-en.png" class="" alt="PlayStore" /></a>
+                <a href="https://play.google.com/store/apps/details?id=ifx.app" target="_blank"><img src="https://www.inveshub.co/ifx/main_page/img/main/play-store-en.png" class="" alt="IFX PlayStore" /></a>
             </div>
             <div id="play-store-th" class="">
-                <a href="https://play.google.com/store/apps/details?id=ifx.app" target="_blank"><img src="https://www.inveshub.co/ifx/main_page/img/main/play-store-th.png" class="" alt="PlayStore" /></a>
+                <a href="https://play.google.com/store/apps/details?id=ifx.app" target="_blank"><img src="https://www.inveshub.co/ifx/main_page/img/main/play-store-th.png" class="" alt="IFX PlayStore" /></a>
             </div>
         </div>
     </div>
 
     <!-- Problem Section -->
-    <div id="ice-problem" class="flex flex-col justify-center items-center m-16 lg:m-24">
+    <div id="ifx-problem" class="flex flex-col justify-center items-center m-16 lg:m-24">
         <p id="problem-header" class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up"></p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up">
             <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded">
@@ -318,7 +318,7 @@
         <div class="grid grid-cols-1 xl:grid-cols-3 space-x-8 justify-center">
             <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-fail-owner.png" class="h-60 mb-4" alt="Customer" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-fail-owner.png" class="h-60 mb-4" alt="IFX Customer" />
                 </div>
                 <p id="problem-owner" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="problem-1" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -330,7 +330,7 @@
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-fail-customer.png" class="h-60 mb-4" alt="Delivery" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-fail-customer.png" class="h-60 mb-4" alt="IFX Delivery" />
                 </div>
                 <p id="problem-customer" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="problem-6" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -339,7 +339,7 @@
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-fail-delivery.png" class="h-60 mb-4" alt="Sales Account" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-fail-delivery.png" class="h-60 mb-4" alt="IFX Sales Account" />
                 </div>
                 <p id="problem-delivery" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="problem-9" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -350,8 +350,8 @@
     </div>
 
     <!-- About Us Section -->
-    <div id="ice-about-us" class="flex flex-row justify-center items-center m-16 lg:m-24">
-        <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-right" data-aos-duration="1000">
+    <div id="ifx-about-us" class="flex flex-row justify-center items-center m-16 lg:m-24" data-aos="fade-up" data-aos-duration="1000">
+        <div class="flex flex-col w-1/2 justify-center items-center">
             <p id="about-us-header" class="font-bold text-blue-700 text-6xl"></p>
             <div class="inline-flex items-center justify-center w-full">
                 <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded">
@@ -365,13 +365,13 @@
             </div>
             <p id="about-us-description" class="font-medium text-blue-700 text-xl text-center"></p>
         </div>
-        <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
-            <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-about-us.gif" class="w-4/5" alt="Intro" />
+        <div class="flex flex-col w-1/2 justify-center items-center">
+            <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-about-us.gif" class="w-4/5" alt="IFX Intro" />
         </div>
     </div>
 
     <!-- Process Section -->
-    <div id="ice-process" class="flex flex-col justify-center items-center m-16 lg:m-24">
+    <div id="ifx-process" class="flex flex-col justify-center items-center m-16 lg:m-24">
         <p class="font-bold text-blue-700 text-6xl text-center mb-4" data-aos="fade-up">Ice Factory Excellence (IFX)</p>
         <p id="process-description" class="font-bold text-blue-700 text-2xl text-center" data-aos="fade-up"></p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up">
@@ -387,7 +387,7 @@
         <div class="grid grid-cols-1 xl:grid-cols-3 space-x-8 justify-center">
             <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-process-owner.png" class="h-60 mb-4" alt="Customer" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-process-owner.png" class="h-60 mb-4" alt="IFX Customer" />
                 </div>
                 <p id="process-owner" class="font-bold text-4xl text-blue-700 mb-4">
                 </p>
@@ -396,7 +396,7 @@
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-process-customer.png" class="h-60 mb-4" alt="Delivery" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-process-customer.png" class="h-60 mb-4" alt="IFX Delivery" />
                 </div>
                 <p id="process-customer" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="process-3" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -405,7 +405,7 @@
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-process-sales.png" class="h-60 mb-4" alt="Sales Account" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-process-sales.png" class="h-60 mb-4" alt="IFX Sales Account" />
                 </div>
                 <p id="process-sales" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="process-6" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -415,7 +415,7 @@
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="4000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-process-production.png" class="h-60 mb-4" alt="Customer" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-process-production.png" class="h-60 mb-4" alt="IFX Customer" />
                 </div>
                 <p id="process-production" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="process-10" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -423,7 +423,7 @@
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="5000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-process-delivery.png" class="h-60 mb-4" alt="Delivery" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-process-delivery.png" class="h-60 mb-4" alt="IFX Delivery" />
                 </div>
                 <p id="process-delivery" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="process-12" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -433,7 +433,7 @@
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="6000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-process-accounting.png" class="h-60 mb-4" alt="Sales Account" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-process-accounting.png" class="h-60 mb-4" alt="IFX Sales Account" />
                 </div>
                 <p id="process-accounting" class="font-bold text-4xl text-blue-700 mb-4"></p>
                 <p id="process-16" class="font-bold text-lg text-blue-700 text-left"></p>
@@ -446,24 +446,24 @@
     </div>
 
     <!-- Performance Section -->
-    <div id="ice-performance" class="flex flex-col justify-center items-center m-16 lg:m-24">
+    <div id="ifx-performance" class="flex flex-col justify-center items-center m-16 lg:m-24">
         <p id="performance-header" class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up"></p>
         <div class="grid grid-cols-1 xl:grid-cols-3 space-x-8 justify-center">
             <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-benefit-sales.png" class="h-60 mb-4" alt="Benefit Sales" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-benefit-sales.png" class="h-60 mb-4" alt="IFX Benefit Sales" />
                 </div>
                 <p id="package-benefit-sales" class="font-bold text-2xl text-blue-700 mb-4"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-benefit-review.png" class="h-60 mb-4" alt="Benefit Review" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-benefit-review.png" class="h-60 mb-4" alt="IFX Benefit Review" />
                 </div>
                 <p id="package-benefit-review" class="font-bold text-2xl text-blue-700 mb-4"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-benefit-save-cost.png" class="h-60 mb-4" alt="Benefit Save Cost" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-benefit-save-cost.png" class="h-60 mb-4" alt="IFX Benefit Save Cost" />
                 </div>
                 <p id="package-benefit-save-cost" class="font-bold text-2xl text-blue-700 mb-4" data-aos="fade-up"
                     data-aos-duration="1000"></p>
@@ -473,7 +473,7 @@
     </div>
 
     <!-- Ours Platform Section -->
-    <div id="ice-ours-platform" class="flex flex-col justify-center items-center m-16 lg:m-24">
+    <div id="ifx-ours-platform" class="flex flex-col justify-center items-center m-16 lg:m-24">
         <p id="platform-header" class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up"></p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up">
             <hr class="w-64 h-1 my-8 bg-blue-700 border-0 rounded">
@@ -488,21 +488,21 @@
         <div class="grid grid-cols-1 xl:grid-cols-3 space-x-8 justify-center">
             <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-platform-customer.gif" class="h-full mb-4" alt="Customer" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-platform-customer.gif" class="h-full mb-4" alt="IFX Customer" />
                 </div>
                 <p id="platform-customer" class="font-bold text-2xl text-blue-700 mb-4"></p>
                 <p id="platform-customer-description" class="font-bold text-medium text-blue-700"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-platform-delivery.gif" class="h-96 mb-4" alt="Delivery" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-platform-delivery.gif" class="h-96 mb-4" alt="IFX Delivery" />
                 </div>
                 <p id="platform-production-delivery" class="font-bold text-2xl text-blue-700 mb-4"></p>
                 <p id="platform-production-delivery-description" class="font-bold text-medium text-blue-700"></p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-duration="3000">
                 <div class="flex h-96 justify-center items-center">
-                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-platform-cal.gif" class="h-96 mb-4" alt="Sales Account" />
+                    <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-platform-cal.gif" class="h-96 mb-4" alt="IFX Sales Account" />
                 </div>
                 <p id="platform-sales-accounting" class="font-bold text-2xl text-blue-700 mb-4"></p>
                 <p id="platform-sales-accounting-description" class="font-bold text-medium text-blue-700"></p>
@@ -511,7 +511,7 @@
     </div>
 
     <!-- Customer Pain Section -->
-    <!-- <div id="ice-customer-pain" class="flex flex-col justify-center items-center p-16 lg:p-24 bg-odd" data-aos="fade-up"
+    <!-- <div id="ifx-customer-pain" class="flex flex-col justify-center items-center p-16 lg:p-24 bg-odd" data-aos="fade-up"
         data-aos-duration="1000">
         <h3 id="customer-pain-problem" class="font-bold text-blue-700 text-6xl"></h3>
         <div class="inline-flex items-center justify-center w-full">
@@ -531,7 +531,7 @@
     </div> -->
 
     <!-- Customer Feedback Section -->
-    <!-- <div id="ice-customer-feedback" class="flex flex-col p-16 lg:p-24">
+    <!-- <div id="ifx-customer-feedback" class="flex flex-col p-16 lg:p-24">
         <p class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up" data-aos-duration="1000">Customer
             Feedback</p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1000">
@@ -546,7 +546,7 @@
         </div>
         <div class="flex flex-row" data-aos="fade-up" data-aos-duration="1000">
             <div class="flex flex-col w-1/2 justify-center items-center" data-aos="fade-right" data-aos-duration="1000">
-                <img src="https://www.inveshub.co/ifx/main_page/img/main/ice-feedback.png" class="w-3/5" alt="Feedback" />
+                <img src="https://www.inveshub.co/ifx/main_page/img/main/ifx-feedback.png" class="w-3/5" alt="IFX Feedback" />
             </div>
             <div class="flex flex-col w-1/2 justify-center" data-aos="fade-left" data-aos-duration="1000">
                 <p class="font-medium text-blue-700 text-2xl mb-4">
@@ -562,7 +562,7 @@
     </div> -->
 
     <!-- Stores Section -->
-    <div id="ice-stores" class="flex flex-col p-16 lg:p-24">
+    <div id="ifx-stores" class="flex flex-col p-16 lg:p-24">
         <p id="stores-header" class="font-bold text-blue-700 text-6xl text-center" data-aos="fade-up"
             data-aos-duration="1000"></p>
         <div class="inline-flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1000">
@@ -576,7 +576,7 @@
             </div>
         </div>
         <div class="flex flex-row">
-            <div id="ice-location-province" data-aos="fade-up" data-aos-duration="2000"></div>
+            <div id="ifx-location-province" data-aos="fade-up" data-aos-duration="2000"></div>
             <div id="review-section" class="hidden flex flex-col w-1/2">
                 <p id="stores-review" class="font-bold text-blue-700 text-2xl text-center mb-8"></p>
                 <div id="review"></div>
@@ -585,7 +585,7 @@
     </div>
 
     <!-- Package Section -->
-    <div id="ice-package" class="flex flex-col justify-center items-center m-16 lg:m-24" data-aos="fade-up"
+    <div id="ifx-package" class="flex flex-col justify-center items-center m-16 lg:m-24" data-aos="fade-up"
         data-aos-duration="1000">
         <p id="package-header" class="font-bold text-blue-700 text-6xl text-center"></p>
         <div class="inline-flex items-center justify-center w-full">
@@ -656,7 +656,7 @@
     </div>
 
     <!-- Contact Us Section -->
-    <div id="ice-contact-us" class="flex flex-col justify-center p-16 lg:p-24 bg-odd">
+    <div id="ifx-contact-us" class="flex flex-col justify-center p-16 lg:p-24 bg-odd">
         <div data-aos="fade-down" data-aos-duration="1000">
             <p id="contact-us-header" class="font-bold text-blue-700 text-6xl text-left mb-4"></p>
             <hr class="w-full h-1 my-4 bg-blue-700 border-0 rounded md:my-10">
@@ -744,58 +744,58 @@
             <ul class="py-2 font-bold text-lg text-blue-700 text-center"
                 aria-labelledby="dropdownTopButton">
                 <li>
-                    <a id="menu-mobile-1" onclick="moveToSection('ice-intro');"
+                    <a id="menu-mobile-1" onclick="moveToSection('ifx-intro');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded">
                 <li>
-                    <a id="menu-mobile-2" onclick="moveToSection('ice-problem');"
+                    <a id="menu-mobile-2" onclick="moveToSection('ifx-problem');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded">
                 <li>
-                    <a id="menu-mobile-3" onclick="moveToSection('ice-about-us');"
+                    <a id="menu-mobile-3" onclick="moveToSection('ifx-about-us');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded">
                 <!-- <li>
-                    <a id="menu-mobile-4" onclick="moveToSection('ice-process');"
+                    <a id="menu-mobile-4" onclick="moveToSection('ifx-process');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded"> -->
                 <li>
-                    <a id="menu-mobile-10" onclick="moveToSection('ice-performance');"
+                    <a id="menu-mobile-10" onclick="moveToSection('ifx-performance');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded">
                 <li>
-                    <a id="menu-mobile-5" onclick="moveToSection('ice-ours-platform');"
+                    <a id="menu-mobile-5" onclick="moveToSection('ifx-ours-platform');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded">
                 <!-- <li>
-                    <a id="menu-mobile-6" onclick="moveToSection('ice-customer-pain');"
+                    <a id="menu-mobile-6" onclick="moveToSection('ifx-customer-pain');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded"> -->
                 <!-- <li>
-                    <a onclick="moveToSection('ice-customer-feedback');"
+                    <a onclick="moveToSection('ifx-customer-feedback');"
                         class="block px-4 py-2 hover:bg-gray-100">Customer
                         Feedback</a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded"> -->
                 <li>
-                    <a id="menu-mobile-7" onclick="moveToSection('ice-stores');"
+                    <a id="menu-mobile-7" onclick="moveToSection('ifx-stores');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded">
                 <li>
-                    <a id="menu-mobile-8" onclick="moveToSection('ice-package');"
+                    <a id="menu-mobile-8" onclick="moveToSection('ifx-package');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
                 <hr class="w-full h-px text-center bg-gray-200 border-0 rounded">
                 <li>
-                    <a id="menu-mobile-9" onclick="moveToSection('ice-contact-us');"
+                    <a id="menu-mobile-9" onclick="moveToSection('ifx-contact-us');"
                         class="block px-4 py-2 hover:bg-gray-100"></a>
                 </li>
             </ul>
