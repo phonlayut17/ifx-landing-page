@@ -421,13 +421,13 @@
     },
     {
         "id": "package-table-price",
-        "th": "ค่าบริการต่อวัน(บาท/จุด)",
-        "en": "Daily Amount (THB)"
+        "th": "ค่าบริการต่อเดือน(บาท)",
+        "en": "Monthly Amount (THB)"
     },
     {
         "id": "package-table-day",
-        "th": "ค่าบริการต่อเดือน(บาท/จุด)",
-        "en": "Monthly Amount (THB)"
+        "th": "สัญญารายปี (บาท)",
+        "en": "Annual contract (THB)"
     },
     {
         "id": "package-service-header",
